@@ -1,0 +1,40 @@
+{
+  "name": "knexSample",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "mocha tests/test.js --exit",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "init": "knex init",
+    "makeMigrate": "knex migrate:make --knexfile knexfile.js",
+    "migrate": "knex migrate:latest --knexfile knexfile.js",
+    "rollback": "knex migrate:rollback --knexfile knexfile.js ",
+    "makeMigration": "knex migrate:make",
+    "makeSeed": "knex seed:make",
+    "seed": "knex seed:run"
+  },
+  "author": "Takahiro Kan",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "knex": "^0.15.2",
+    "moment": "^2.22.2",
+    "dotenv": "^10.0.0",
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "chai-http": "^4.3.0",
+    "eslint": "^5.7.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-config-problems": "^1.1.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "husky": "^1.1.2",
+    "mocha": "^5.2.0",
+    "nodemon": "^2.0.12",
+    "prettier": "^1.12.1",
+    "pretty-quick": "^1.4.1"
+  }
+}
