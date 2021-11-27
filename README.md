@@ -3,6 +3,7 @@
 ターミナルでDB作成：
 ```
 createdb PairTre
+```
 
 (オプション)knexfile.js の作成：
 ```bash
@@ -42,3 +43,7 @@ seedファイルから初期データ作成：
 npm run seed
 ```
 
+knexのサンプルコード実行：
+```bash
+node index.js
+```
