@@ -7,6 +7,6 @@ exports.up = async function(knex) {
   
   //ロールバック用
   exports.down = async function(knex) {
-    await knex.schema.dropTableIfExists("user");
+    // await knex.schema.dropTableIfExists("user");
   };
   

@@ -1,7 +1,9 @@
+"use strict";
+
 exports.up = async function(knex) {
     return knex.schema.createTable("achievement", (t) => {
-        t.increments() // auto-incrementing id column
-          .index(); // index this column
+        // t.increments() // auto-incrementing id column
+        //   .index(); // index this column
           
         t.string("authId") // ユーザとの紐付け
           .references("auth")
@@ -10,11 +12,13 @@ exports.up = async function(knex) {
         t.integer("courseId") // コースとの紐付け
           .references("id")
           .inTable("course");
+          
+        t.primary(["authId","courseId"]);
       });
   };
   
   //ロールバック用
   exports.down = async function(knex) {
-    await knex.schema.dropTableIfExists("achievement");
+    // await knex.schema.dropTableIfExists("achievement");
   };
   

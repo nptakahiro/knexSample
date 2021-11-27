@@ -25,5 +25,5 @@ exports.up = function(knex, Promise) {
 
   //ロールバック用
   exports.down = async function(knex) {
-    await knex.schema.dropTableIfExists("exercise");
+    // await knex.schema.dropTableIfExists("exercise");
   };
